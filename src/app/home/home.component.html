@@ -1,5 +1,8 @@
-<button (click)="updateHeader()" id="updateHeader">Update header</button>
-<button (click)="updateEvents()" id="updateEvents">Update events</button>
+<div class="btn-group" role="group" aria-label="Basic example">
+  <button class="btn btn-primary" (click)="updateHeader()" id="updateHeader">Update header</button>
+  <button  class="btn btn-primary" (click)="updateEvents()" id="updateEvents">Update events</button>
+  <a class="btn btn-primary" [routerLink]="['/event/add']">Add Event</a>  
+</div> 
 <full-calendar
   *ngIf="calendarOptions"
   #fullcalendar

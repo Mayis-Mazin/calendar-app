@@ -48,7 +48,9 @@ export class HomeComponent implements OnInit {
     };
 
     // simulate event data
-    this.calendarOptions.events = this.events
+    this.calendarOptions.events = (localStorage.getItem('events')) ? JSON.parse(localStorage.getItem('events')) : this.events;
+
+    localStorage.setItem('events', JSON.stringify(this.calendarOptions.events));
   }
 
   //#region 

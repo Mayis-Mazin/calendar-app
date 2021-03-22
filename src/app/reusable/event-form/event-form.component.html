@@ -1,0 +1,51 @@
+<div class="container">
+    <h1 class="text-center">{{title}}</h1>
+    <form [formGroup]="eventForm">
+        <div class="row">
+            <div class="col-md-4">
+                <label for="title" class="form-label">Event Title</label>
+                <input type="text" class="form-control" id="title" formControlName="title" >
+            </div>
+            <div class="col-md-4">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" formControlName="date" >
+            </div>
+            <div class="col-md-4">
+                <label for="titme" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" formControlName="time" >
+            </div>
+            
+            <div class="col-md-4">
+                <label for="class" class="form-label">Class</label>
+                <input type="text" class="form-control" id="class" formControlName="class" >
+            </div>
+            <div class="col-md-4">
+                <label for="material" class="form-label">Material</label>
+                <input type="text" class="form-control" id="material" formControlName="material" >
+            </div>
+            <div class="col-md-4">
+                <label for="join" class="form-label">Zoom Link</label>
+                <input type="text" class="form-control" id="join" formControlName="join" >
+            </div>            
+            
+            <div class="col-md-12">
+                <label for="details" class="form-label">Notes</label>
+                <textarea class="form-control" id="details" formControlName="details" ></textarea>
+            </div>                
+        </div>
+    </form>
+
+    <div class="row" style="margin-top: .5rem;">
+        <div class="col-md-12">
+            <button 
+                *ngIf="frmType == 'add'"
+                (click)="addNewEvent()"
+                class="btn btn-primary">Add Event</button>
+
+            <button 
+                *ngIf="frmType != 'add'"
+                (click)="editEvent()"
+                class="btn btn-success">Edit Event</button>                    
+        </div> 
+    </div>
+</div>

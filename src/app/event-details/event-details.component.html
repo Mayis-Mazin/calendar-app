@@ -1,40 +1,54 @@
  <div class="shade">
   <div class="blackboard">
           <div class="form">
-                  <p>
-                          <label>Exam Name: </label>
-                  </p>
-                  <p>
-                          <label>Date: </label>
-                  </p>
-                  <p>
-                          <label>time: </label>
-                  </p>
-                  <p>
-                          <label>Class: </label>
-                  </p>
-                  <p>
-                          <label>Exam Material: </label>
-                  </p>
-
-                  <p>
-                      <label>Notes: </label>
-            {{eventDetails[0].details}}
-
-
-                  </p>
-
-                  <p class="wipeout">
-                          <a   href="/event/:id/edit" class='mg' value="Edit" >
-                            Edit
-                            </a>
-                          
-                          <a href="/" class="btn_more">
-                              Back
-                            </a>
-              </p>
-              
-              
+                  <div class="container">
+                        <div class="row">
+                                <div class="col-md-4">
+                                        <label>Exam Name: </label>
+                                        <span>{{eventDetails[0].title}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                        <label>Date: </label>
+                                        <span>{{eventDetails[0].date}}</span>
+                                </div>
+                                <div class="col-md-4">
+                                        <label>time: </label>
+                                        <span>{{eventDetails[0].time}}</span>
+                                </div> 
+                                
+                                <div class="col-md-6">
+                                        <label>Class: </label>
+                                        <span>{{eventDetails[0].class}}</span>
+                                </div>
+                                <div class="col-md-6">
+                                        <label>Exam Material: </label>
+                                        <span>{{eventDetails[0].material}}</span>
+                                </div>  
+                                
+                                <div class="col-md-12">
+                                        <label>Notes: </label>
+                                        <p>{{eventDetails[0].details}}</p>
+                                </div>    
+                                
+                                <div class="col-md-12">
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                <a 
+                                                  [routerLink]="['/event/edit/', eventDetails[0].id]"
+                                                  class="btn btn-primary" >Edit</a> 
+                                                  <button 
+                                                  (click)="deleteEvent()"
+                                                  class="btn btn-primary" >Delete</button>  
+                                                  <a 
+                                                  [href]="eventDetails[0].join"
+                                                  target="_blank"
+                                                  class="btn btn-primary" >Join</a>                                                                                                                                 
+                                                  <a 
+                                                  [routerLink]="['/']"
+                                                  class="btn btn-primary" >Back</a>
+                                        </div> 
+                                </div>                                  
+                        </div>
+                  </div>                                                   
           </div>
   </div>
 </div>
