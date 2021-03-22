@@ -1,4 +1,4 @@
-<div class="event_container">
+<!-- <div class="event_container">
     <div class="event_bg" style="background-image: url('https://image.freepik.com/free-vector/isolated-bundle-books_1308-46573.jpg')"></div>
     <div class="event_info">
       <div class="event_title">
@@ -10,7 +10,6 @@
       </div>
       <div class="event_desc">
         <p>
-            {{eventDetails[0].details}}
         </p>
       </div>
 
@@ -35,4 +34,45 @@
   </div>
 
 
+ -->
 
+ <div class="shade">
+  <div class="blackboard">
+          <div class="form">
+                  <p>
+                          <label>Exam Name: </label>
+                  </p>
+                  <p>
+                          <label>Date: </label>
+                  </p>
+                  <p>
+                          <label>time: </label>
+                  </p>
+                  <p>
+                          <label>Class: </label>
+                  </p>
+                  <p>
+                          <label>Exam Material: </label>
+                  </p>
+
+                  <p>
+                      <label>Notes: </label>
+            {{eventDetails[0].details}}
+
+
+                  </p>
+
+                  <p class="wipeout">
+                          <a   href="/event/:id/edit" class='mg' value="Edit" >
+                            Edit
+                            </a>
+                          
+                          <a href="/" class="btn_more">
+                              Back
+                            </a>
+              </p>
+              
+              
+          </div>
+  </div>
+</div>
