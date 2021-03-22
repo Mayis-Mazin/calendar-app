@@ -12,7 +12,7 @@ import { EventDetailsComponent } from './event-details/event-details.component';
 
 // calender
 import { FullCalendarModule } from '@fullcalendar/angular';
-import { DetailsEditComponent } from './details-edit/details-edit.component';
+import { DetailsEditComponent } from './event-details/details-edit/details-edit.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { DetailsEditComponent } from './details-edit/details-edit.component';
     HttpClientModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
-      {path: 'event/:id', component: EventDetailsComponent}
+      {path: 'event/:id', component: EventDetailsComponent},
+      {path: 'event/:id/edit', component: DetailsEditComponent}
     ])
   ],
   providers: [],
